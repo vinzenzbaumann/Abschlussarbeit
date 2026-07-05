@@ -1,0 +1,55 @@
+# =========================
+# LaTeX - Build Artefakte
+# =========================
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Bibliography (BibTeX / Biber)
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# PDF (optional: auskommentieren wenn du PDF NICHT versionieren willst)
+# *.pdf
+
+# =========================
+# Editors / IDEs
+# =========================
+
+# VS Code
+.vscode/
+
+# Texmaker / TeXstudio
+*.autosave
+*.texpadtmp
+
+# =========================
+# OS artifacts
+# =========================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# =========================
+# Build folders (falls genutzt)
+# =========================
+build/
+output/
+out/
+
+# =========================
+# latexmk (explizit)
+# =========================
+*.latexmk
