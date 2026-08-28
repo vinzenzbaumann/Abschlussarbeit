@@ -2,17 +2,27 @@
 %\titlespacing{\section}{0pt}{12pt plus 4pt minus 2pt}{-6pt plus 2pt minus 2pt} 
 
 % Kopf- und Fusszeile
-\renewcommand{\sectionmark}[1]{\markright{#1}}
-\renewcommand{\leftmark}{\rightmark}
-\pagestyle{fancy} 
+% Kopf- und Fußzeile
+
+\pagestyle{fancy}
+
+\fancyhf{}
+
 \lhead{}
 \chead{}
-\rhead{\thesection\space\contentsname}
+\rhead{\rightmark}
+
 \lfoot{}
 \cfoot{}
-\rfoot{\ \linebreak \thepage}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
+\rfoot{\thepage}
+
+\renewcommand*{\headrulewidth}{0.4pt}
+\renewcommand*{\footrulewidth}{0.4pt}
+
+% Aktuelle Section in der Kopfzeile
+\renewcommand*{\sectionmark}[1]{%
+    \markright{\thesection\ #1}%
+}
 
 % Vorspann
 \pagenumbering{Roman}
