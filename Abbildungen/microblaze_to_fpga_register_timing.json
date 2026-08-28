@@ -1,0 +1,40 @@
+{
+  "signal": [
+    { "name": "CLK_SYS (100 MHz)",              "wave": "p..................." },
+    {},
+  
+   
+    [ "MicroBlaze Domain",
+      { "name": "REG_UPDATE (from AXI Reg)",     "wave": "h............l......" }
+    ],
+    { },
+    { },
+    { },
+    { },
+    { },
+      {},
+    
+    [ "FPGA Audio Domain (2-FF Synchronization)",
+     { "name": "AUDIO_STROBE (48 kHz)",           "wave": "l............h.l...." },
+      { "name": "reg_update_ff1 (1st stage)",    "wave": "lh...........l......" },
+      { "name": "reg_update_sync (2nd stage)",   "wave": "llh..........l......" }
+    ],
+    {},
+    { },
+    { },
+    { },
+    { },
+    { },
+    
+    [ "Filter Hardware (Data Path)",
+      { "name": "Shadow Register",              "wave": "5..................." , "data": ["coeffs idling / ready"]},
+      { "name": "Active Filter Register",       "wave": "3............4......" , "data": ["old coeffs", "new coeffs"]},
+      { "name": "Audio Processing",             "wave": "5..................." , "data": ["continuous streaming"]}
+    ]
+  ],
+  "config": {
+    "hscale": 2.0,
+    "vspace": 35,
+    "left": 380
+  }
+}
