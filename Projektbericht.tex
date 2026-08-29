@@ -6,178 +6,113 @@
 \begin{document}
 
 % ----------------------------------------------------------------------------------
-% Titelseite
+% Projektbericht
 % ----------------------------------------------------------------------------------
+% Set student metadata (so macros from lib/commands.tex are defined)
 \student{Baumann Vinzenz}
 {3390401}
 {Technische Informatik}
 
-\MyTitelseite{}
-{1}
-{Bachelorarbeit}
-{Entwicklung einer FPGA-basierten Audioverarbeitung}
-{Prof.\ Dr.\ Daniel Münch}
-{Prof.\ Dr.\ Alexander Metzner}
-{30.09.\the\year}
+\begin{center}
+  {\LARGE \textbf{Projektbericht}}\\[1em]
+  {\large Entwicklung einer FPGA-basierten Audioverarbeitung}\\[2em]
+  \vspace{2em}
+  Autor: \studentName\\
+  Matr.-Nr.: \studentMatnr\\
+  Studiengang: \studentStudiengang\\
+  Datum: \today
+\end{center}
 
 \pagenumbering{roman}
 \setcounter{page}{1}
 
-% ----------------------------------------------------------------------------------
-% Kurzfassung / Abstract / Danksagung
-% ----------------------------------------------------------------------------------
-\section*{Abstract}
-...
-\pagebreak
-
-\section*{Danksagung}
-...
-\pagebreak
-
-% ----------------------------------------------------------------------------------
-% Inhaltsverzeichnis
-% ----------------------------------------------------------------------------------
 \tableofcontents
 \pagebreak
 
-% ----------------------------------------------------------------------------------
-% Hauptinhalt
-% ----------------------------------------------------------------------------------
 \setstretch{1.15}
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
 % ----------------------------------------------------------------------------------
-% Einleitung
+% Requirements
 % ----------------------------------------------------------------------------------
-\section{Einleitung}
+\section{Requirements}
+Beschreibe hier funktionale und nicht-funktionale Anforderungen, Use-Cases und Akzeptanzkriterien.
+
+% ----------------------------------------------------------------------------------
+% Architecture
+% ----------------------------------------------------------------------------------
+\section{Architecture}
+Systemübersicht, Module, Blockdiagramme und Kommunikationsfluss.
+
+% ----------------------------------------------------------------------------------
+% Interface Specification
+% ----------------------------------------------------------------------------------
+\section{Interface Specification}
+Schnittstellen (AXI-Streams, I2S, GPIO), Signalbeschreibungen, Protokolle.
+
+% ----------------------------------------------------------------------------------
+% Timing Model
+% ----------------------------------------------------------------------------------
+\section{Timing Model}
+Taktebenen, Latenzen, Durchsatzannahmen und Timing-Pfade.
+
+% ----------------------------------------------------------------------------------
+% RTL Specification
+% ----------------------------------------------------------------------------------
+\section{RTL Specification}
+Beschreibung der RTL-Module, Zustandsdiagramme und Datenpfade.
+
+% ----------------------------------------------------------------------------------
+% Register Specification
+% ----------------------------------------------------------------------------------
+\section{Register Specification}
+Detaillierte Registerkarte: Adressen, Reset-Werte, Bit-Felder, Zugriffsrechte.
+\subsection{Register-Map}
+Tabellarische Auflistung der Register.
+
+% ----------------------------------------------------------------------------------
+% Testbench / Test Specification
+% ----------------------------------------------------------------------------------
+\section{Testbench / Test Specification}
+Testfälle, Stimuli, erwartete Ergebnisse und Coverage-Ziele.
+
+% ----------------------------------------------------------------------------------
+% RTL / VHDL
+% ----------------------------------------------------------------------------------
+\section{RTL / VHDL}
+Hinweise zur Code-Organisation, Styleguide und Modulreferenzen.
+
+% ----------------------------------------------------------------------------------
+% Simulation
+% ----------------------------------------------------------------------------------
+\section{Simulation}
+Simulationsumgebung, Testbenches, Wellenform-Auswertung, Sensitivitätsanalysen.
+
+% ----------------------------------------------------------------------------------
+% Synthesis
+% ----------------------------------------------------------------------------------
+\section{Synthesis}
+Synthesetools, Constraints, Area- und Timing-Optimierungen.
+
+% ----------------------------------------------------------------------------------
+% Timing / CDC
+% ----------------------------------------------------------------------------------
+\section{Timing / CDC}
+Cross-clock-domain-Strategien, CDC-Checks, Metastabilitätsbehandlung.
+
+% ----------------------------------------------------------------------------------
+% Implementation
+% ----------------------------------------------------------------------------------
+\section{Implementation}
+Platzierung, Routing-Hinweise, Implementation-Flow (FPGA-Toolchain).
+
+% ----------------------------------------------------------------------------------
+% Hardware
+% ----------------------------------------------------------------------------------
+\section{Hardware}
+Board-Spezifikation, Peripherie, Tests auf dem Target.
 
 \pagebreak
-
-% ----------------------------------------------------------------------------------
-% Grundlagen
-% ----------------------------------------------------------------------------------
-\section{Grundlagen und Stand der Technik}
-
-\subsection{Digitale Audioverarbeitung}
-\subsection{FPGA-Technologie}
-\subsection{AXI-Streaming}
-\subsection{MicroBlaze}
-\subsection{I2S}
-
-\pagebreak
-\section{Aufgabenstellung}
-
-\section{Konzept}
-
-% ----------------------------------------------------------------------------------
-% Implementierung
-% ----------------------------------------------------------------------------------
-\section{Implementierung}
-
-\pagebreak
-
-% ----------------------------------------------------------------------------------
-% Evaluierung
-% ----------------------------------------------------------------------------------
-\section{Evaluierung}
-
-\pagebreak
-
-% ----------------------------------------------------------------------------------
-% Diskussion
-% ----------------------------------------------------------------------------------
-\section{Diskussion}
-
-% ----------------------------------------------------------------------------------
-% Interpretation
-% ----------------------------------------------------------------------------------
-\subsection{Interpretation der Ergebnisse}
-ihr habt es extrem gut
-
-\subsection{Ausblick}
-
-\pagebreak
-% ----------------------------------------------------------------------------------
-% Schlusszusammenfassung
-% ----------------------------------------------------------------------------------
-\section{Schlusszusammenfassung}
-
-\pagebreak
-
-
-% ----------------------------------------------------------------------------------
-% ANHANG (WICHTIG: KEIN Roman-MIX!)
-% ----------------------------------------------------------------------------------
-
-\appendix
-\section{Anhang}
-
-\pagebreak
-
-% ----------------------------------------------------------------------------------
-% ABKÜRZUNGEN (KOMA SAUBER)
-% ----------------------------------------------------------------------------------
-
-\addsec{Abkürzungsverzeichnis}
-
-\begin{acronym}[KDE]
-\acro{BA}[BA]{Bachelorarbeit}
-\acro{MA}[MA]{Masterarbeit}
-\end{acronym}
-
-\pagebreak
-
-% ----------------------------------------------------------------------------------
-% EIDESSTATTLICHE ERKLÄRUNG
-% ----------------------------------------------------------------------------------
-
-\addsec{Eidesstattliche Erklärung}
-
-\vspace{3em}
-
-Name:\\
-Vorname:\\
-Studiengang:\\
-
-\vspace{4em}
-
-\begin{enumerate}
-\setlength\itemsep{2em}
-\item Ich erkläre, dass ich die Arbeit selbstständig verfasst habe.
-\item Ich habe alle Quellen korrekt angegeben.
-\end{enumerate}
-
-\vspace{4em}
-
-Regensburg, den
-
-\vspace{2em}
-....................................................
-
-\pagebreak
-
-% ----------------------------------------------------------------------------------
-% LITERATUR
-% ----------------------------------------------------------------------------------
-
-\renewcommand\refname{Literaturverzeichnis}
-\bibliographystyle{ieeetr}
-\bibliography{quellen}
-
-\pagebreak
-
-% ----------------------------------------------------------------------------------
-% DATENTRÄGER
-% ----------------------------------------------------------------------------------
-
-\addsec{Inhalt des Datenträgers}
-
-\begin{itemize}
-\item Quellcode
-\item FPGA-Projekt
-\item Messdaten
-\item Dokumentation
-\end{itemize}
 
 \end{document}
